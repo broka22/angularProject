@@ -1,0 +1,41 @@
+<div>
+  <h1>User Lists</h1>
+  <button (click)="addUser()" class="btn btn-primary">Add User</button>
+</div>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>User Name</th>
+      <th>Password</th>
+      <th>Email</th>
+      <th>Dob</th>
+      <th>Mobile No</th>
+      <th>Gender</th>
+      <th>Hobbies</th>
+      <th>Nationality</th>
+      <th>Comments</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.userName}}</td>
+      <td>{{user.password}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.mobileNo}}</td>
+      <td>{{user.dob}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.hobbies}}</td>
+      <td>{{user.nationality}}</td>
+      <td>{{user.comments}}</td>
+      <td>
+        <button class="btn btn-primary" (click)="editUser(user.id)">Edit</button>
+        <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
